@@ -1,0 +1,287 @@
+:root {
+  --main-color: #e65f78;
+}
+
+html {
+  scroll-padding-top: 68px;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+/* &=============>> Global Rules  */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.text-pink {
+  color: var(--main-color);
+}
+
+.bg-dark-section {
+  background-color: #eee;
+}
+
+.title p {
+  max-width: 500px;
+}
+
+.btn-download {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: #fff;
+  --bs-btn-hover-color: #111;
+  --bs-btn-hover-bg: #fff;
+  --bs-btn-hover-border-color: #fff;
+}
+
+.btn-pink {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #e65f78;
+  --bs-btn-border-color: #e65f78;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #b03d52;
+  --bs-btn-hover-border-color: #b03d52;
+}
+
+/* ?=======> Selection */
+::selection {
+  background-color: #e65f7855;
+}
+/* ?=======> Scrollbar Customization */
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: 0 0 6px #0000004d inset;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px #0000004d;
+  background-color: #e65f78;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #b03d52;
+}
+
+/* ?=======> Setting Box */
+.settings {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(23, 3, 3);
+  top: 200px;
+  z-index: 9999;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+
+/* ^============> Navbar */
+nav .nav-link:hover {
+  color: var(--main-color);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .show > .nav-link {
+  color: var(--main-color);
+  font-weight: bold;
+}
+/* ^============> Header */
+
+header {
+  background-image: linear-gradient(#000d, #000c), url(../images//header-bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+header h1 {
+  font-size: 50px;
+}
+
+header .container {
+  margin-top: 68px;
+}
+
+header h1::before {
+  content: "";
+  animation: typing 5s infinite;
+}
+
+@keyframes typing {
+  0%,
+  100% {
+    content: " ";
+  }
+  2.3%,
+  97.2% {
+    content: " A";
+  }
+  4.6%,
+  94.9% {
+    content: " A ";
+  }
+  6.9%,
+  92.6% {
+    content: " A P";
+  }
+  9.2%,
+  90.3% {
+    content: " A Ph";
+  }
+  11.5%,
+  88% {
+    content: " A Pho";
+  }
+  13.8%,
+  85.7% {
+    content: " A Phot";
+  }
+  16.1%,
+  83.4% {
+    content: " A Photo";
+  }
+  18.4%,
+  81.1% {
+    content: " A Photog";
+  }
+  20.7%,
+  78.8% {
+    content: " A Photogr";
+  }
+  23%,
+  76.5% {
+    content: " A Photogra";
+  }
+  25.3%,
+  74.2% {
+    content: " A Photograp";
+  }
+  27.6%,
+  71.9% {
+    content: " A Photograph";
+  }
+  29.9%,
+  69.6% {
+    content: " A Photographe";
+  }
+  32.2%,
+  67.3% {
+    content: " A Photographer";
+  }
+  34.5%,
+  65% {
+    content: " A Photographer.";
+  }
+}
+
+header .description {
+  max-width: 500px;
+}
+
+/* ^============> About */
+.about ul li {
+  width: 40px;
+  height: 40px;
+  transition: border-color 350ms, transform 350ms;
+}
+
+.about ul li:hover {
+  --bs-border-color: var(--main-color);
+  transform: scale(1.25) rotate(10deg);
+}
+
+.about ul li a {
+  color: #111;
+  transition: color 350ms;
+}
+
+.about ul li:hover a {
+  color: var(--main-color);
+}
+
+/* ^============> portfolio */
+.portfolio ul {
+  width: fit-content;
+}
+
+.nav-tabs .nav-item .nav-link {
+  padding: 5px 15px !important;
+  color: #111;
+  font-weight: 700;
+  border-radius: 100vh;
+}
+
+.nav-tabs .nav-item .nav-link:hover {
+  border-color: transparent;
+}
+
+.nav-tabs .nav-item .nav-link:hover,
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: #fff !important;
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.portfolio .project-content {
+  top: 150%;
+  transition: top 350ms;
+  z-index: 9;
+}
+
+.portfolio .inner:hover .project-content {
+  top: 0;
+}
+
+.portfolio .inner:hover::after {
+  opacity: 1;
+}
+
+.portfolio .inner::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000c;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 350ms;
+}
+
+/* ===========> Contact */
+
+.contact form textarea {
+  min-height: 150px;
+  max-height: 300px;
+  resize: vertical;
+}
+
+.form-control {
+  border-width: 2px;
+}
+
+.form-control:focus {
+  border-color: var(--main-color);
+  box-shadow: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
